@@ -11,7 +11,7 @@ import  Form  from '@/components/Form'
   return (
     <div className="__main">
       <Form />
-      <ul>
+      <ul className="__toDoList">
         {todos?.map((todo) => (
           <li key={todo.id}>{todo.title}--{todo.completed ? "Checked" : "Unchecked"}</li>
         ))}

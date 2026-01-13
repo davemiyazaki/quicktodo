@@ -12,6 +12,6 @@ export async function addToDo({title = "New To Do ", completed = false}:{title?:
   revalidatePath("/") 
 }
 
-export async function deleteToDo(id:int):void{
+export async function deleteToDo(id:int):Promise<void>{
   console.log("deleteToDo function received: ", id);
 }

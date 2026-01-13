@@ -10,7 +10,8 @@ export default function Form(){
   async function handleSubmit(e:any){
     e.preventDefault()
     console.log(name)
-    await addToDo({name})
+    const title = name;
+    await addToDo({title})
     setName('')
   }
   return(

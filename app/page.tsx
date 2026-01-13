@@ -1,7 +1,7 @@
 import { createClient } from '@/utils/supabase/server'
 import { cookies } from 'next/headers'
 import  Form  from '@/components/Form'
-import Button from '@/components/Button'
+import DeleteButton from '@/components/DeleteButton'
   export default async function Page() {
   const cookieStore = await cookies()
   const supabase = createClient(cookieStore)
@@ -15,7 +15,7 @@ import Button from '@/components/Button'
         {todos?.map((todo) => (
           <li key={todo.id}>
           <span>{todo.title}--{todo.completed ? "Checked" : "Unchecked"}</span>
-          <Button id={todo.id} title="Delete" />
+          <DeleteButton id={todo.id} title="Delete" />
           </li>
         ))}
       </ul>

@@ -8,12 +8,14 @@ interface ListItemInterface {
 }
 export default function ListItem({id, title, completed}: ListItemInterface){
   const [spanClicked, setSpanClicked] = useState(false)
-  function handleItemListClick(){spanClicked ? console.log("Span was clicked"):console.log("Span was not clicked"); setSpanClicked(false)}
-  function handleSpanClick(){setSpanClicked(true)}
+  function handleItemListClick(){
+    console.log("item was clicked") 
+  }
   return(
-          <li onClick={handleItemListClick}>
-          <span onClick={handleSpanClick}>{title}--{completed ? "Checked" : "Unchecked"}</span>
-          <DeleteButton id={id} title="Delete" />
-          </li>
+    <div className="__toDoItem">
+      <input onClick={handleItemListClick} type="text" id={id} value={title} readOnly/>
+      <span>{completed ? "Checked" : "Unchecked"}</span>
+      <DeleteButton id={id}/>
+    </div>
   ) 
 }

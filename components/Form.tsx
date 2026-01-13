@@ -7,8 +7,11 @@ export default function Form(){
   function handleChange(e:any) {
     setName(e.target.value);
   }
-  function handleSubmit(e:any){
-    console.log("Submitted successfully!")
+  async function handleSubmit(e:any){
+    e.preventDefault()
+    console.log(name)
+    await addToDo({name})
+    setName('')
   }
   return(
     <>

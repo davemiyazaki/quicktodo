@@ -13,7 +13,7 @@ import  Form  from '@/components/Form'
       <Form />
       <ul>
         {todos?.map((todo) => (
-          <li key={todo.id}>{todo.title}//{todo.completed}</li>
+          <li key={todo.id}>{todo.title}--{todo.completed ? "Checked" : "Unchecked"}</li>
         ))}
       </ul>
     </div>

@@ -12,6 +12,9 @@ export async function addToDo({title = "New To Do ", completed = false}:{title?:
   revalidatePath("/") 
 }
 
-export async function deleteToDo(id:int):Promise<void>{
-  console.log("deleteToDo function received: ", id);
+export async function deleteToDo(id:number):Promise<void>{
+  const supabase =createClient(await cookies())
+
+  await supabase.from('todos').delete().eq('id',id)
+  revalidatePath('/')
 }

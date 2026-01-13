@@ -1,7 +1,8 @@
+'use client'
 import { deleteToDo } from "@/app/actions"
 export default function DeleteButton ({id=0, title="Delete"}){
 
-  async function handleClick (id: number):Promise<void>{
+  async function handleClick ():Promise<void>{
    try{
      await deleteToDo(id);
    }catch(error){

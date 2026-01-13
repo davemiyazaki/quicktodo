@@ -13,10 +13,6 @@ import DeleteButton from '@/components/DeleteButton'
       <Form />
       <ul className="__toDoList">
         {todos?.map((todo) => (
-          <li key={todo.id}>
-          <span>{todo.title}--{todo.completed ? "Checked" : "Unchecked"}</span>
-          <DeleteButton id={todo.id} title="Delete" />
-          </li>
         ))}
       </ul>
     </div>

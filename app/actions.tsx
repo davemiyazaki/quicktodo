@@ -18,3 +18,12 @@ export async function deleteToDo(id:number):Promise<void>{
   await supabase.from('todos').delete().eq('id',id)
   revalidatePath('/')
 }
+
+export async function updateToDo(id :number, title :string):Promise<void>{
+  const supabase =createClient(await cookies())
+
+  await supabase.from('todos').update({title}).eq('id',id);
+  revalidatePath('/')
+}
+
+

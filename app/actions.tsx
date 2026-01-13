@@ -11,3 +11,7 @@ export async function addToDo({title = "New To Do ", completed = false}:{title?:
   await supabase.from('todos').insert({completed, title});//adding our todo to database
   revalidatePath("/") 
 }
+
+export async function deleteToDo(id:int):void{
+  console.log("deleteToDo function received: ", id);
+}

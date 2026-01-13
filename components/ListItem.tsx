@@ -4,9 +4,9 @@ interface ListItemInterface {
   title: string,
   completed: boolean,
 }
-export default ListItem({id, title, completed}: ListItemInterface){
+export default function ListItem({id, title, completed}: ListItemInterface){
   return(
-          <li key={id}>
+          <li>
           <span>{title}--{completed ? "Checked" : "Unchecked"}</span>
           <DeleteButton id={id} title="Delete" />
           </li>

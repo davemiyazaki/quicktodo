@@ -1,7 +1,7 @@
 import { createClient } from '@/utils/supabase/server'
 import { cookies } from 'next/headers'
 import  Form  from '@/components/Form'
-import DeleteButton from '@/components/DeleteButton'
+import ListItem from '@/components/ListItem'
   export default async function Page() {
   const cookieStore = await cookies()
   const supabase = createClient(cookieStore)
@@ -13,6 +13,11 @@ import DeleteButton from '@/components/DeleteButton'
       <Form />
       <ul className="__toDoList">
         {todos?.map((todo) => (
+          <ListItem 
+            key={todo.id}
+            id={todo.id} 
+            title={todo.title} 
+            completed={todo.completed}/>
         ))}
       </ul>
     </div>

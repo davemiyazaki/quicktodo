@@ -1,4 +1,5 @@
 'use client'
+import { updateToDo } from "@/app/actions"
 import DeleteButton from "./DeleteButton"
 import { useState } from "react"
 interface ListItemInterface {
@@ -7,12 +8,28 @@ interface ListItemInterface {
   completed: boolean,
 }
 export default function ListItem({id, title, completed}: ListItemInterface){
+  const [toDoActive, setToDoActive] = useState(false)
+  const [toDoTitle, setToDoTitle] = useState(title)
   function handleItemListClick(){
-    console.log("item was clicked") 
+    setToDoActive(true)
+  }
+  function handleItemListChange(e){
+    setToDoTitle(e.target.value)
+    console.log(toDoTitle)
+  }
+  function handleOnBlur(){
+    console.log(toDoTitle)
+    updateToDo(id, toDoTitle);
   }
   return(
     <div className="__toDoItem">
-      <input onClick={handleItemListClick} type="text" value={title} readOnly/>
+      <input 
+        onClick={handleItemListClick} 
+        onChange={handleItemListChange}
+        onBlur={handleOnBlur}
+        type="text" 
+        value={toDoTitle} 
+        readOnly={!toDoActive}/>
       <span>{completed ? "Checked" : "Unchecked"}</span>
       <DeleteButton id={id}/>
     </div>

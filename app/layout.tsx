@@ -5,7 +5,7 @@ import "./globals.css";
 
 const chiru = localFont({
   src:"../public/fonts/chirufont.ttf",
-  variable:"--font-chiru",
+  //variable:"--font-chiru",
 })
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={chiru.className}>
       <body
         className={`antialiased`}
       >

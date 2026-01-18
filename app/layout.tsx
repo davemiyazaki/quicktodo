@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={chiru.className}>
       <body
-        className={`w-screen h-screen px-2 pt-42 pb-6 inline-flex flex-col justify-start-items-center gap-12 overflow-hidden antialiased`}
+        className={` antialiased`}
       >
         {children}
       </body>

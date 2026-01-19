@@ -1,6 +1,5 @@
 import { createClient } from '@/utils/supabase/server'
 import { cookies } from 'next/headers'
-import ListItem from '@/components/ListItem'
 import Nav from '@/components/Nav'
 import Content from '@/components/Content'
 
@@ -13,16 +12,7 @@ const { data: todos } = await supabase.from('todos').select()
 return (
     <>
       <Nav />
-      <Content />
-      <ul className="__toDoList">
-        {todos?.map((todo) => (
-          <ListItem 
-            key={todo.id}
-            id={todo.id} 
-            title={todo.title} 
-            completed={todo.completed}/>
-        ))}
-      </ul>
+      <Content toDoItems={todos}/>
   </>
 )
 }

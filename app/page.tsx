@@ -11,17 +11,17 @@ const { data: todos } = await supabase.from('todos').select()
 
 return (
     <>
-    <Nav />
-    <Form />
-    <ul className="__toDoList">
-      {todos?.map((todo) => (
-        <ListItem 
-          key={todo.id}
-          id={todo.id} 
-          title={todo.title} 
-          completed={todo.completed}/>
-      ))}
-    </ul>
+      <Nav />
+      <Form />
+      <ul className="__toDoList">
+        {todos?.map((todo) => (
+          <ListItem 
+            key={todo.id}
+            id={todo.id} 
+            title={todo.title} 
+            completed={todo.completed}/>
+        ))}
+      </ul>
   </>
 )
 }

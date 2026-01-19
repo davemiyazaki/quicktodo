@@ -1,6 +1,6 @@
 import { createClient } from '@/utils/supabase/server'
 import { cookies } from 'next/headers'
-import Nav from '@/components/Nav'
+import NavBar from '@/components/NavBar/NavBar'
 import Content from '@/components/Content'
 
 export default async function Page() {
@@ -11,7 +11,7 @@ const { data: todos } = await supabase.from('todos').select()
 
 return (
     <>
-      <Nav />
+      <NavBar />
       <Content toDoItems={todos}/>
   </>
 )

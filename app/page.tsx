@@ -10,7 +10,7 @@ const supabase = createClient(cookieStore)
 const { data: todos } = await supabase.from('todos').select()
 
 return (
-  <div className="__main ">
+    <>
     <Nav />
     <Form />
     <ul className="__toDoList">
@@ -22,7 +22,7 @@ return (
           completed={todo.completed}/>
       ))}
     </ul>
-  </div>
+  </>
 )
 }
 

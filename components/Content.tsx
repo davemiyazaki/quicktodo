@@ -1,5 +1,5 @@
 import  InputField  from './InputField'
-import ToDoList from './ToDoList';
+import ToDoList from './todo/ToDoList';
 export default function Content({toDoItems}){
 
   return (

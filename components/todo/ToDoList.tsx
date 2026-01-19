@@ -3,7 +3,7 @@ export default function ToDoList({toDoItems}){
   return(
     <div className="flex flex-col justify-start items-start gap-2">
         {toDoItems?.map((todo) => (
-          <ToDoListItem 
+          <ToDoItem 
             key={todo.id}
             id={todo.id} 
             title={todo.title} 

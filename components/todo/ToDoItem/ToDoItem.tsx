@@ -1,7 +1,18 @@
 'use client'
+
+/*
+TO-DO LIST:
+[] Move input to todo name using appropriate prop forwarding method (ask ChatGPT if anything)
+[] Move Checklist to ToDoCheck.tsx
+[] Proceed applying styles to todo item and todo input field
+[] When ready with placeholders continue to developing actual design for buttons and components
+*/
 import { updateToDo } from "@/app/actions"
-import ToDoDeleteButton from "./ToDoDeleteButton"
 import { useState } from "react"
+import ToDoDeleteButton from "./ToDoDeleteButton"
+import ToDoCheck from "./ToDoCheck"
+import ToDoName from "./ToDoName"
+
 interface ListItemInterface {
   id: number,
   title: string,

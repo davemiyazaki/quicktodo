@@ -32,7 +32,7 @@ export default function ToDoItem({id, title, completed}: ListItemInterface){
   }
   return(
     <div className=" w-full flex justify-start items-center gap-2">
-      <div className="w-8 h-8 bg-red-400"> </div>
+      <ToDoCheck checkStatus={completed}/>
       <ToDoName 
         onClick={handleItemListClick} 
         onChange={handleItemListChange}
@@ -40,11 +40,9 @@ export default function ToDoItem({id, title, completed}: ListItemInterface){
         type="text" 
         value={toDoTitle} 
         readOnly={!toDoActive} />
-      <div className="w-12 h-12 bg-indigo-400"> </div>
+      <ToDoDeleteButton id={id}/>
     </div>
   ) 
 }
 /*
-      <ToDoCheck checkStatus={completed}/>
-      <ToDoDeleteButton id={id}/>
 */

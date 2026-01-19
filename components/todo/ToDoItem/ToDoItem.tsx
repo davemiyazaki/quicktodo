@@ -35,6 +35,13 @@ export default function ToDoItem({id, title, completed}: ListItemInterface){
   return(
     <div className="inline-flex justify-start items-start gap-6">
       <span>{completed ? "Checked" : "Unchecked"}</span>
+      <ToDoName 
+        onClick={handleItemListClick} 
+        onChange={handleItemListChange}
+        onBlur={handleOnBlur}
+        type="text" 
+        value={toDoTitle} 
+        readOnly={!toDoActive} />
       <ToDoDeleteButton id={id}/>
     </div>
   ) 

@@ -1,11 +1,7 @@
-export default function ToDoName({}):{
+export default function ToDoName({...props}){
   return(
-      <input 
-        onClick={handleItemListClick} 
-        onChange={handleItemListChange}
-        onBlur={handleOnBlur}
-        type="text" 
-        value={toDoTitle} 
-        readOnly={!toDoActive}/>
+      <input
+        {...props}
+        />
   )
 }

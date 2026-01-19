@@ -1,6 +1,6 @@
 'use client'
 import { updateToDo } from "@/app/actions"
-import DeleteButton from "./DeleteButton"
+import ToDoDeleteButton from "./ToDoDeleteButton"
 import { useState } from "react"
 interface ListItemInterface {
   id: number,
@@ -31,7 +31,7 @@ export default function ToDoItem({id, title, completed}: ListItemInterface){
         value={toDoTitle} 
         readOnly={!toDoActive}/>
       <span>{completed ? "Checked" : "Unchecked"}</span>
-      <DeleteButton id={id}/>
+      <ToDoDeleteButton id={id}/>
     </div>
   ) 
 }

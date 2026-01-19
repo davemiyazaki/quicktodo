@@ -9,6 +9,6 @@ export default function ToDoList({toDoItems}){
             title={todo.title} 
             completed={todo.completed}/>
         ))}
-    <div/>
+    </div>
   );
 }

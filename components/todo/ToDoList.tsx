@@ -1,7 +1,7 @@
 import ToDoItem from "./ToDoItem/ToDoItem"
 export default function ToDoList({toDoItems}){
   return(
-    <div className="flex flex-col justify-start items-start gap-2">
+    <div className="flex flex-col justify-center items-start gap-2 w-full">
         {toDoItems?.map((todo) => (
           <ToDoItem 
             key={todo.id}

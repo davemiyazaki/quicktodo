@@ -1,4 +1,10 @@
+import  Form  from '@/components/Form'
+
 export default function Content(){
 
-  return ();
+  return (
+    <div className=''>
+      <Form />
+    </div>
+  );
 }

@@ -34,6 +34,7 @@ export default function ToDoItem({id, title, completed}: ListItemInterface){
   }
   return(
     <div className="inline-flex justify-start items-start gap-6">
+      <ToDoCheck checkStatus={completed}/>
       <ToDoName 
         onClick={handleItemListClick} 
         onChange={handleItemListChange}

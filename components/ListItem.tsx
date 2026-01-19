@@ -22,7 +22,7 @@ export default function ListItem({id, title, completed}: ListItemInterface){
     updateToDo(id, toDoTitle);
   }
   return(
-    <div className="__toDoItem">
+    <div className="">
       <input 
         onClick={handleItemListClick} 
         onChange={handleItemListChange}

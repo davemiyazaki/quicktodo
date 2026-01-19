@@ -1,4 +1,11 @@
 export default function ToDoCheck({checkStatus}:{checkStatus:boolean}){
-  if(checkStatus){console.log(checkStatus)}else{console.log("Check is false")}
-  return(<span>{checkStatus ? "Checked" : "Unchecked"}</span>)
+
+  return(
+    <div 
+    className="
+      h-8 w-8 
+      border-blue-950 border-2
+    "/>
+  )
+
 }

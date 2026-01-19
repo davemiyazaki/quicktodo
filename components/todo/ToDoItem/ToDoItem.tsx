@@ -2,8 +2,6 @@
 
 /*
 TO-DO LIST:
-[] Move input to todo name using appropriate prop forwarding method (ask ChatGPT if anything)
-[] Move Checklist to ToDoCheck.tsx
 [] Proceed applying styles to todo item and todo input field
 [] When ready with placeholders continue to developing actual design for buttons and components
 */

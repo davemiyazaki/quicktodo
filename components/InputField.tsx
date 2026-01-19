@@ -1,7 +1,7 @@
 'use client'
 import { useState } from "react";
 import {addToDo} from '@/app/actions'
-export default function Form(){
+export default function InputField(){
   const [name, setName] = useState("")
 
   function handleChange(e:any) {

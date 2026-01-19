@@ -22,7 +22,7 @@ export default function ListItem({id, title, completed}: ListItemInterface){
     updateToDo(id, toDoTitle);
   }
   return(
-    <div className="">
+    <div className="inline-flex justify-start items-start gap-6">
       <input 
         onClick={handleItemListClick} 
         onChange={handleItemListChange}

@@ -11,6 +11,7 @@ export default function ToDoDeleteButton ({id=0, title="Delete"}){
   }
 
   return(
-    <button onClick={handleClick} key={id} type="button" className="hover:text-red-400 border-solid border-black border-2 p-0.5 ml-0.5 active:text-blue-300">{title}</button>
+    <div className="w-12 h-12 bg-indigo-400"/>
   )
 }  
+/*<button onClick={handleClick} key={id} type="button" className="hover:text-red-400 border-solid border-black border-2 p-0.5 ml-0.5 active:text-blue-300">{title}</button>*/

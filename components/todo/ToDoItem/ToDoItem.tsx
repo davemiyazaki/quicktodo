@@ -7,7 +7,7 @@ interface ListItemInterface {
   title: string,
   completed: boolean,
 }
-export default function ToDoListItem({id, title, completed}: ListItemInterface){
+export default function ToDoItem({id, title, completed}: ListItemInterface){
   const [toDoActive, setToDoActive] = useState(false)
   const [toDoTitle, setToDoTitle] = useState(title)
   function handleItemListClick(){

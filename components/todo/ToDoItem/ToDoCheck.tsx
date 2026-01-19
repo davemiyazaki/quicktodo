@@ -1,4 +1,4 @@
-export default function ToDoCheck(){
+export default function ToDoCheck(checkStatus:boolean){
 
-  return("Checkbox")
+  return(<span>{checkStatus ? "Checked" : "Unchecked"}</span>)
 }

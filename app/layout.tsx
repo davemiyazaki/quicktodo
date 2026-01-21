@@ -1,11 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Yusei_Magic} from "next/font/google";
 import localFont from "next/font/local" 
 import "./globals.css";
 
 const chiru = localFont({
   src:"../public/fonts/chirufont.ttf",
-  //variable:"--font-chiru",
+})
+
+const yuseiMagic = Yusei_Magic({
+  subsets: ['latin', 'japanese'],
+  weight:['400']
 })
 
 export const metadata: Metadata = {
@@ -19,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={chiru.className}>
+    <html lang="en" className={yuseiMagic.className}>
       <body
         className={` w-screen h-screen px-2 pt-42 pb-6 inline-flex flex-col justify-start-items-center gap-12 overflow-hidden antialiased`}
       >

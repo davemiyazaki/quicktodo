@@ -11,7 +11,7 @@ export default function ToDoDeleteButton ({id=0, title="Delete"}){
   }
 
   return(
-    <div className="w-12 h-12 bg-indigo-400"/>
+    <div className="w-8 h-8 bg-indigo-400"/>
   )
 }  
 /*

@@ -15,7 +15,7 @@ export default function InputField(){
     setName('')
   }
   return(
-    <div className="flex items-center gap-4 w-[416px]">
+    <div className="flex items-center gap-4 w-[480px]">
       <img src="/addButton.svg" alt="Add" className="w-4 h-4" />
       <form onSubmit={handleSubmit} className="h-full"> 
         <label>

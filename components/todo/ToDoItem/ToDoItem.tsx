@@ -31,7 +31,7 @@ export default function ToDoItem({id, title, completed}: ListItemInterface){
     updateToDo(id, toDoTitle);
   }
   return(
-    <div className=" w-full flex justify-start items-center gap-2">
+    <div className="flex justify-start items-center gap-4 w-[480px]">
       <ToDoCheck checkStatus={completed}/>
       <ToDoName 
         onClick={handleItemListClick} 

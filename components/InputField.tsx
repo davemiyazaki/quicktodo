@@ -16,8 +16,9 @@ export default function InputField(){
   }
   return(
     <>
+      <img src="/addButton.svg" alt="Add" className="w-8 h-8" />
       <form onSubmit={handleSubmit}> 
-        <label>New To-Do:
+        <label>
         <input 
           type='text'
           value = {name}

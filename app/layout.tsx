@@ -25,7 +25,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={yuseiMagic.className}>
       <body
-        className={` w-screen h-screen px-2 pt-42 pb-6 inline-flex flex-col justify-start-items-center gap-12 overflow-hidden antialiased`}
+        className="
+          w-screen h-screen 
+          px-2 pt-42 pb-6 
+          inline-flex flex-col justify-start-items-center 
+          gap-12
+          text-blue-700
+          overflow-hidden 
+          antialiased"
       >
         {children}
       </body>

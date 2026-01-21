@@ -15,17 +15,19 @@ export default function InputField(){
     setName('')
   }
   return(
-    <>
+    <div className="flex items-center gap-4">
       <img src="/addButton.svg" alt="Add" className="w-8 h-8" />
-      <form onSubmit={handleSubmit}> 
+      <form onSubmit={handleSubmit} className="h-full"> 
         <label>
         <input 
           type='text'
+          placeholder="New Task"
           value = {name}
           onChange={handleChange}
+          className="h-full"
         />
         </label>
       </form>
-    </>
+    </div>
   )
  }

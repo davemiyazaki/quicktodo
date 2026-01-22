@@ -1,6 +1,6 @@
 'use client'
 import { deleteToDo } from "@/app/actions"
-export default function ToDoDeleteButton ({id=0, title="Delete"}){
+export default function ToDoDeleteButton ({id=0}){
 
   async function handleClick ():Promise<void>{
    try{
@@ -11,10 +11,6 @@ export default function ToDoDeleteButton ({id=0, title="Delete"}){
   }
 
   return(
-    <img src='/deleteButton.svg' className="w-8 h-8"/>
+    <img key={id} onClick={handleClick} src='/deleteButton.svg' className="w-8 h-8"/>
   )
 }  
-/*
- *
- * temporary hidden this for placeholder use. Styling of this objec is expected from button to div. 
- * <button onClick={handleClick} key={id} tye="button" className="hover:text-red-400 border-solid border-black border-2 p-0.5 ml-0.5 active:text-blue-300">{title}</button>*/

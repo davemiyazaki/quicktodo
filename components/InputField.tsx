@@ -24,7 +24,7 @@ export default function InputField(){
           placeholder="New Task"
           value = {name}
           onChange={handleChange}
-          className="h-full"
+          className="placeholder-gray-400  h-full"
         />
         </label>
       </form>

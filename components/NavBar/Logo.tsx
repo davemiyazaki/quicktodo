@@ -1,5 +1,6 @@
 export default function Logo(){
    
   
-  return(<div className="w-60 h-12 bg-indigo-400"/>);
+  return(<div className="w-fit -12 text-4xl overflow-hidden text-center">quicktodo</div>);
+
 }

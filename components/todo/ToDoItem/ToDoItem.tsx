@@ -1,4 +1,5 @@
 'use client'
+
 import { updateToDo } from "@/app/actions"
 import { useState } from "react"
 import ToDoDeleteButton from "./ToDoDeleteButton"
@@ -11,9 +12,10 @@ interface ListItemInterface {
   completed: boolean,
 }
 export default function ToDoItem({id, title, completed}: ListItemInterface){
-  const [toDoActive, setToDoActive] = useState(false)
+  const [toDoActive, setToDoActive] = useState(completed)
   const [toDoTitle, setToDoTitle] = useState(title)
   function handleItemListClick(){
+    console.log('clicked')
     setToDoActive(true)
   }
   function handleItemListChange(e){
@@ -26,7 +28,7 @@ export default function ToDoItem({id, title, completed}: ListItemInterface){
   }
   return(
     <div className="flex items-center gap-4 w-[480px]">
-      <ToDoCheck checkStatus={completed}/>
+      <ToDoCheck onClick={handleItemListClick} checkStatus={toDoActive}/>
       <ToDoName 
         onClick={handleItemListClick} 
         onChange={handleItemListChange}

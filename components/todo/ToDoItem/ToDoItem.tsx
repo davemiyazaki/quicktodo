@@ -12,10 +12,15 @@ interface ListItemInterface {
   completed: boolean,
 }
 export default function ToDoItem({id, title, completed}: ListItemInterface){
-  const [toDoActive, setToDoActive] = useState(completed)
+  const [toDoActive, setToDoActive] = useState(false)
+  const [toDoCheckStatus, setToDoCheckStatus] =useState(completed)
   const [toDoTitle, setToDoTitle] = useState(title)
+  function handleCheckClick(){
+    console.log('Check is clicked')
+    
+    toDoCheckStatus ? setToDoCheckStatus(false) : setToDoCheckStatus(true)
+  }
   function handleItemListClick(){
-    console.log('clicked')
     setToDoActive(true)
   }
   function handleItemListChange(e){
@@ -28,7 +33,7 @@ export default function ToDoItem({id, title, completed}: ListItemInterface){
   }
   return(
     <div className="flex items-center gap-4 w-[480px]">
-      <ToDoCheck onClick={handleItemListClick} checkStatus={toDoActive}/>
+      <ToDoCheck onClick={handleCheckClick} checkStatus={setToDoCheckStatus}/>
       <ToDoName 
         onClick={handleItemListClick} 
         onChange={handleItemListChange}

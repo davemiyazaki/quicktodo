@@ -1,10 +1,4 @@
 'use client'
-
-/*
-TO-DO LIST:
-[] Proceed applying styles to todo item and todo input field
-[] When ready with placeholders continue to developing actual design for buttons and components
-*/
 import { updateToDo } from "@/app/actions"
 import { useState } from "react"
 import ToDoDeleteButton from "./ToDoDeleteButton"

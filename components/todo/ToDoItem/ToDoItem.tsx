@@ -5,6 +5,7 @@ import { useState } from "react"
 import ToDoDeleteButton from "./ToDoDeleteButton"
 import ToDoCheck from "./ToDoCheck"
 import ToDoName from "./ToDoName"
+import { todo } from "node:test"
 
 interface ListItemInterface {
   id: number,
@@ -16,14 +17,10 @@ export default function ToDoItem({id, title, completed}: ListItemInterface){
   const [toDoCheckStatus, setToDoCheckStatus] =useState(completed)
   const [toDoTitle, setToDoTitle] = useState(title)
   function handleCheckClick(){
-    if(toDoCheckStatus === true){
-      completed = false
-      setToDoCheckStatus(false)
-    }else{
-      completed = true
-      setToDoCheckStatus(true)
-    }
-    updateToDo(id,toDoTitle, toDoCheckStatus)
+    console.log(!toDoCheckStatus)
+    setToDoCheckStatus(!toDoCheckStatus)
+    updateToDo(id,toDoTitle, !toDoCheckStatus)
+    //console.log({id, toDoTitle, !toDoCheckStatus})
   }
   function handleItemListClick(){
     setToDoActive(true)

@@ -23,7 +23,7 @@ export async function updateToDo(id :number, title :string, completed:boolean):P
   const supabase =createClient(await cookies())
 
   await supabase.from('todos').update({title}).eq('id',id);
-  await supabase.from('todos').update({completed}).eq('completed', completed)
+  await supabase.from('todos').update({completed}).eq('id', id)
   revalidatePath('/')
 }
 

@@ -17,10 +17,8 @@ export default function ToDoItem({id, title, completed}: ListItemInterface){
   const [toDoCheckStatus, setToDoCheckStatus] =useState(completed)
   const [toDoTitle, setToDoTitle] = useState(title)
   function handleCheckClick(){
-    console.log(!toDoCheckStatus)
     setToDoCheckStatus(!toDoCheckStatus)
     updateToDo(id,toDoTitle, !toDoCheckStatus)
-    //console.log({id, toDoTitle, !toDoCheckStatus})
   }
   function handleItemListClick(){
     setToDoActive(true)

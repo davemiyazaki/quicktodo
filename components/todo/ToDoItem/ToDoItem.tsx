@@ -16,12 +16,14 @@ export default function ToDoItem({id, title, completed}: ListItemInterface){
   const [toDoCheckStatus, setToDoCheckStatus] =useState(completed)
   const [toDoTitle, setToDoTitle] = useState(title)
   function handleCheckClick(){
-    //console.log({toDoCheckStatus})
-    //console.log('Check is clicked')
-    if(toDoCheckStatus === true)
+    if(toDoCheckStatus === true){
+      completed = false
       setToDoCheckStatus(false)
-    else 
+    }else{
+      completed = true
       setToDoCheckStatus(true)
+    }
+    updateToDo(id,toDoTitle, toDoCheckStatus)
   }
   function handleItemListClick(){
     setToDoActive(true)
@@ -32,7 +34,7 @@ export default function ToDoItem({id, title, completed}: ListItemInterface){
   }
   function handleOnBlur(){
     console.log(toDoTitle)
-    updateToDo(id, toDoTitle);
+    updateToDo(id, toDoTitle, toDoCheckStatus);
   }
   return(
     <div className="flex items-center gap-4 w-[480px]">

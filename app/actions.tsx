@@ -27,4 +27,21 @@ export async function updateToDo(id :number, title :string, completed:boolean):P
   revalidatePath('/')
 }
 
+export async function updateLocalStorage(id:number, title:string, completed:boolean, action:string):Promise<void>{
+  if(action === 'add'){
+    // complete add task
+  }else if(action === 'update'){
+    //complete update task
+  }
+  else if(action === 'delete'){
+    //complete deletion task
+  }
+  //update the task list
+}
+
+export async function readLocalStorage(){
+  const arrayOfToDos : {id:number, title:string, completed:boolean}[]= [];
+  return arrayOfToDos;
+}
+
 

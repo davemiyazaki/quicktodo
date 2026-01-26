@@ -8,8 +8,10 @@
  */ 
 import { ToDoItemType } from "@/types/common";
 
-export function read(): void{
+export function read(): ToDoItemType{
   //const array: ToDoItemType[]= [{id:1, title:"New ToDo", isCompleted:false}]
   //localStorage.setItem('todos', JSON.stringify(array))
-  localStorage.setItem('todos', JSON.stringify([{id: 1, title: 'Learn TypeScript', isCompleted: false}]))
+  localStorage.setItem('todos', JSON.stringify([{id: 1, title: 'TestToDo', isCompleted: false}]))
+  const array = JSON.parse(localStorage.getItem('todos'))
+  return array; 
 }

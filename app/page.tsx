@@ -5,7 +5,7 @@
 import { useEffect } from 'react'
 import NavBar from '@/components/NavBar/NavBar'
 import Content from '@/components/Content'
-
+import * as local from '@/utils/local'
 interface Item{
   id:number,
   title:string,
@@ -22,6 +22,7 @@ export default function Page() {
 //const data = JSON.parse(localStorage.getItem('todos'));
 
 //const initialData: Item[] = [{id:1, title:"todo",isCompleted:false}]; 
+local.read();
 useEffect(()=>{
   console.log(JSON.parse(localStorage.getItem('todos')));
 }, [])

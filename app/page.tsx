@@ -1,6 +1,7 @@
 'use client'
 //import { createClient } from '@/utils/supabase/server'
 //import { cookies } from 'next/headers'
+
 import { useEffect } from 'react'
 import NavBar from '@/components/NavBar/NavBar'
 import Content from '@/components/Content'
@@ -22,7 +23,6 @@ export default function Page() {
 
 //const initialData: Item[] = [{id:1, title:"todo",isCompleted:false}]; 
 useEffect(()=>{
-  localStorage.setItem('todos', JSON.stringify([{id: 1, title: 'Learn TypeScript', isCompleted: false}]))
   console.log(JSON.parse(localStorage.getItem('todos')));
 }, [])
 return (

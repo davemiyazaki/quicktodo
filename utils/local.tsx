@@ -6,10 +6,10 @@
  * [] Create delete method
  * [] Create update method
  */ 
-impor
+import { ToDoItemType } from "@/types/common";
 
-
-export function read(): ToDoItems[]{
- array:ToDoItems[]= []
- return array;
+export function read(): void{
+  //const array: ToDoItemType[]= [{id:1, title:"New ToDo", isCompleted:false}]
+  //localStorage.setItem('todos', JSON.stringify(array))
+  localStorage.setItem('todos', JSON.stringify([{id: 1, title: 'Learn TypeScript', isCompleted: false}]))
 }

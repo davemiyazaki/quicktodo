@@ -5,3 +5,11 @@
  * [] Create add method
  * [] Create delete method
  * [] Create update method
+ */ 
+impor
+
+
+export function read(): ToDoItems[]{
+ array:ToDoItems[]= []
+ return array;
+}

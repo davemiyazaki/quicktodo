@@ -27,7 +27,15 @@ export async function updateToDo(id :number, title :string, completed:boolean):P
   revalidatePath('/')
 }
 
-export async function updateLocalStorage(id:number, title:string, completed:boolean, action:string):Promise<void>{
+
+interface ToDoItem{
+  id:number,
+  title:string,
+  completed:boolean
+}
+
+
+export async function updateLocalStorage(toDoItem:ToDoItem, array:ToDoItem[], action:string):Promise<void>{
   if(action === 'add'){
     // complete add task
   }else if(action === 'update'){
@@ -40,7 +48,8 @@ export async function updateLocalStorage(id:number, title:string, completed:bool
 }
 
 export async function readLocalStorage(){
-  const arrayOfToDos : {id:number, title:string, completed:boolean}[]= [];
+  //const arrayOfToDos : ToDoItem[] = [];
+  const arrayOfToDos = localStorage.getItem('todos')
   return arrayOfToDos;
 }
 
